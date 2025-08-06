@@ -1,0 +1,429 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;600;700&display=swap');
+
+/* Base */
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../public/arabica-coffee.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 2rem;
+  animation: fadeInUp 0.8s ease-in-out;
+  color: white;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Hero Buttons */
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.outlineButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 14px rgba(124, 52, 171, 0.3);
+}
+
+.primaryButton {
+  background-color: #7c34ab;
+  color: #fff;
+  border: none;
+}
+
+.primaryButton:hover {
+  transform: scale(1.05);
+  background-color: #f3e8ff;
+  color: #7c34ab;
+}
+
+.outlineButton {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.outlineButton:hover {
+  transform: scale(1.05);
+  background: white;
+  color: #7c34ab;
+}
+
+/* Why Choose Section */
+.whyChooseSection {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+}
+
+.whyChooseSection h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Hero Details */
+.hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-right {
+  flex: 2;
+}
+
+.card-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.card {
+  background: linear-gradient(to bottom right, #fff, #f9f5ff);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.dark-card {
+  background: linear-gradient(to bottom right, #7c34ab, #531888);
+  color: white;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  background-color: #f3e8ff;
+  color: #7c34ab;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.dark-card .card-icon {
+  background-color: white;
+  color: #7c34ab;
+}
+
+/* Prerequisites */
+.prerequisitesContainer {
+  margin-top: 6rem;
+}
+
+.prerequisitesContainer h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.prerequisitesGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-left: 10rem;
+  padding: 2rem;
+}
+
+.prerequisitesGrid h4 {
+  margin-bottom: 1.5rem;
+}
+
+.prerequisitesGrid ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.prerequisitesGrid ul li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.checkIcon {
+  color: #7c34ab;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 5px;
+}
+
+/* Programs Section */
+.programsSection {
+  padding: 5rem 2rem;
+  background-color: #fff;
+}
+
+.programList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.programCard {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.imageContainer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.imageContainer:hover::after {
+  opacity: 1;
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #7c34ab;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.programDetails {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.programMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.skillsSection ul,
+.requirementsSection ul {
+  list-style-type: none;
+  padding-left: 1.2rem;
+}
+
+.skillsSection li::before,
+.requirementsSection li::before {
+  content: "✔";
+  color: #7c34ab;
+  margin-right: 0.5rem;
+}
+
+.skillsSection li,
+.requirementsSection li {
+  margin-top: 1rem;
+}
+
+.registerButton {
+  margin-top: 1rem;
+  background-color: #7c34ab;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.registerButton:hover {
+  background-color: #6b21a8;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 2rem;
+  background-color: #f3e8ff;
+  text-align: center;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.secondaryButton,
+.outlineLightButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton {
+  background-color: #7c34ab;
+  color: white;
+  border: none;
+}
+
+.secondaryButton:hover {
+  background-color: #6b21a8;
+}
+
+.outlineLightButton {
+  border: 2px solid #7c34ab;
+  background: transparent;
+  color: #7c34ab;
+}
+
+.outlineLightButton:hover {
+  background: #7c34ab;
+  color: white;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .heroSection {
+    padding: 1rem;
+  }
+
+  .prerequisitesGrid {
+    margin-left: 0;
+  }
+}
+/* .countdownTimer {
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.countdownTimer h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+} */
+.countdown-timer strong {
+  color: #b74cff;
+}
+.countdown-timer {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}

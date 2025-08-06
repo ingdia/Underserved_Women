@@ -1,0 +1,469 @@
+.courses-page {
+  font-family: 'Segoe UI', sans-serif;
+  /* padding: 2rem; */
+  background-color: #f8f9fb;
+  color: #333;
+  overflow: hidden;
+}
+
+.hero-section {
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+.hero-text {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+  max-width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-content {
+  max-width: 750px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: #7c34ab;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6b21a8;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #7c34ab;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  justify-content: right;
+  margin-right: 10rem;
+  margin-top: -2.1rem;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.courses h2{
+  margin-left: 10rem;
+}
+.filter-bar input:focus,
+.filter-bar select:focus {
+  outline: none;
+  border-color: #7c34ab;
+}
+
+/* Courses grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* gap: 1rem; */
+  margin-top: 1rem;
+  margin-left: 8rem;
+  margin-right: 4rem;
+}
+
+/* Course Card */
+.course-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.5s ease-in-out;
+  width: 360px;
+  margin-bottom: 2rem;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+}
+
+.course-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-info h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.course-info p {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.course-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.8rem;
+}
+
+.course-info ul {
+  padding-left: 1rem;
+  margin: 0;
+  list-style-type: none;
+}
+
+.course-info ul li {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+
+.course-info ul li::before {
+  content: "✔";
+  color: #7c34ab;
+  margin-right: 0.5rem;
+}
+
+.course-btn {
+  margin-top: auto;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #7c34ab;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 12rem;
+
+
+}
+
+.course-btn:hover {
+  background-color: #6b21a8;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.3rem;
+  border: none;
+  background: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;  
+  margin-bottom: 2rem;
+
+}
+
+.pagination .active {
+  background-color: #7c34ab;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.course-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.course-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.course-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #4c1d95, #7c3aed); /* Purple gradient */
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  line-height: 24px;
+  transition: width 0.4s ease-in-out;
+}
+
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chapter-card {
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.03);
+}
+
+.chapter-card h3 {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.chapter-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.chapter-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chapter-actions label {
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.quiz-button {
+  background-color: #7c34ab;
+  border: none;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #6b21a8;
+}
+
+.chapter-actions span {
+  color: #28a745;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.final-quiz-section {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border: 2px solid #7c34ab;
+  border-radius: 8px;
+  background: #e6f0ff;
+  text-align: center;
+}
+
+.final-quiz-button {
+  background-color: #7c34ab;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.final-quiz-button:hover {
+  background-color: #6b21a8;
+}
+
+/* Modal styles */
+
+.quiz-modal {
+  position: relative;
+  background: white;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 5rem auto;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.2);
+}
+
+.quiz-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.quiz-modal h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.quiz-modal p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.close-button {
+  background-color: #ff4c4c;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #cc3b3b;
+}
+
+.react-hot-toast {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  border-radius: 8px !important;
+  padding: 12px 20px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #1e293b; 
+}
+
+.react-hot-toast.success {
+  background-color: #d1fae5 !important; 
+  border: 1px solid #10b981 !important; 
+  color: #065f46 !important; 
+}
+
+.react-hot-toast.error {
+  background-color: #fee2e2 !important; 
+  border: 1px solid #ef4444 !important; 
+  color: #991b1b !important; 
+}

@@ -1,0 +1,186 @@
+.add-quiz-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9fb;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #2e2e2e;
+}
+
+/* Card style */
+.quiz-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: 0.3s;
+}
+
+.form-header {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #4b1c88;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline-color: #4b1c88;
+  background-color: #fff;
+}
+
+.generate-btn {
+  background-color: #4b1c88;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+  background-color: #3a1570;
+}
+
+/* Quiz Table (Preview) */
+.quiz-preview {
+  margin-top: 2rem;
+}
+
+.quiz-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.quiz-table th, .quiz-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.quiz-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+.save-btn {
+  background-color:  #3a1570;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color:  #3a1570;
+}
+
+
+/* Add these styles to your addQuiz.css file */
+
+/* --- Quiz Preview Section --- */
+.quiz-preview {
+  margin-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+}
+
+.preview-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+}
+
+.preview-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.preview-question-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+.preview-question-text {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.preview-options-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for options */
+  gap: 0.75rem;
+}
+
+.preview-options-list li {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: white;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+/* Style for the correct answer */
+.preview-options-list li.correct-answer {
+  background-color: #d1fae5; /* Light green */
+  border-color: #10b981; /* Green */
+  color: #065f46; /* Dark green */
+  font-weight: 600;
+  position: relative;
+}
+
+.preview-options-list li.correct-answer::after {
+  content: '✓';
+  font-weight: bold;
+  color: #065f46;
+  margin-left: 0.5rem;
+}
+
+/* Responsive adjustment for options */
+@media (max-width: 640px) {
+  .preview-options-list {
+    grid-template-columns: 1fr; /* Stack options on small screens */
+  }
+}

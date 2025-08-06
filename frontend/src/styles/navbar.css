@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+
+.navbar {
+  background-color: #f8f6f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.services-link {
+  position: relative;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: black;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #fff;
+  padding: 12px;
+  min-width: 280px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
+
+.dropdown-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #6b21a8;
+}
+
+.dropdown-desc {
+  font-size: 14px;
+  color: #444;
+  margin-top: 4px;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #6b21a8;
+  background: #6b21a8;
+  color: white;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-button {
+  background-color: #4c1d95;
+  border-color: #6b21a8;
+  color: #fff;
+}
+.nav-link {
+  color: black;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background-color: #6b21a8;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #6b21a8;
+}
+
+
+.dashboard-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #4b4b4b;
+  margin-left: 1rem;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-link:hover {
+    background-color: #ede9f6;
+}
+
+.username {
+  font-weight: 500;
+  color: #4b4b4b;
+}
+
+.user-icon {
+  font-size: 36px;
+  color: #6b21a8;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.nav-button.login {
+  color: #6b21a8;
+  border-color: #d1d5db;
+}
+.nav-button.login:hover {
+  background-color: #f3f4f6;
+  border-color: #a491c2;
+}
+.nav-button.register {
+  background-color: #6b21a8;
+  color: white;
+}
+.nav-button.register:hover {
+  background-color: #4c1d95;
+}
+
+
+.skeleton-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.skeleton-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.skeleton-name {
+  width: 80px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #e5e7eb;
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse {
+  50% { opacity: 0.6; }
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
