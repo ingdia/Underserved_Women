@@ -19,4 +19,4 @@ RUN npm ci --include=dev
 
 RUN npx next build --experimental-build-mode compile
 
-ENTRYPOINT ["npx", "next", "start", "--port", "3000", "-H", "::"]
+ENTRYPOINT ["npx", "next", "start", "--port", "5000", "-H", "::"]

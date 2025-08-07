@@ -10,7 +10,7 @@ app {
     HOST = "::"
   }
 
-  port = 3000
+  port = 5000
 
   compute {
     cpu      = 1

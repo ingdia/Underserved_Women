@@ -14,7 +14,7 @@ interface Slot {
 
 const generateTimeSlots = (): string[] => {
   const slots: string[] = [];
-  let start = new Date();
+  const start = new Date();
   start.setHours(9, 0, 0, 0);
   const end = new Date(start);
   end.setHours(17, 30);
